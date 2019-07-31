@@ -57,7 +57,9 @@
 
 *code* :
 `Track.where(artist: 'AC/DC').each do |track|
+
   puts track.title
+
 end`
 
 *answer* :
@@ -83,7 +85,9 @@ Whole Lotta Rosie
 
 *code* :
 `Track.where(album: 'Let There Be Rock').each do |track|
+
   puts track.title
+
 end`
 
 *answer* :
@@ -100,7 +104,9 @@ Whole Lotta Rosie
 
 *code* :
 `price = Track.where(album: 'Let There Be Rock').map{ |track| track.price}.reduce(&:+)
+
 duration = Track.where(album: 'Let There Be Rock').map{ |track| track.duration}.reduce(&:+)
+
 hash = {:price => price, :duration => duration}`
 
 *answer* :
@@ -117,7 +123,9 @@ hash = {:price => price, :duration => duration}`
 
 *code* :
 `Track.where(artist: 'Eric Clapton').each do |track|
+
   track.update(artist: 'Britney Spears')
+  
 end`
 
 *answer* : N/A
